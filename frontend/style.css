@@ -1,40 +1,53 @@
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .task-form {
-  text-align: center;
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .task-form input {
-  padding: 5px;
-  border: 1px solid black;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .task-form button {
-  padding: 6px 10px;
-  background: lightblue;
-  border: 1px solid black;
+  padding: 8px 15px;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #0056b3;
 }
 
 .board {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .column {
   flex: 1;
-  border: 1px solid black;
-  margin: 5px;
-  padding: 5px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .column h2 {
@@ -42,19 +55,32 @@ h1 {
 }
 
 .task-list {
-  min-height: 150px;
-  border: 1px dashed gray;
-  padding: 5px;
+  min-height: 200px;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
 }
 
 .task {
-  background: #eee;
-  padding: 5px;
-  margin-bottom: 5px;
-  border: 1px solid gray;
+  background: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: grab;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.task button {
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
   margin-left: 5px;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.task-actions button:hover {
+  opacity: 0.7;
 }
