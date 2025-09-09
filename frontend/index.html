@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Kanban Board</h1>
+  <div class="task-form">
+    <input type="text" id="taskTitle" placeholder="Task title" />
+    <input type="text" id="taskDesc" placeholder="Task description" />
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  <div class="board">
+    <div class="column" data-status="todo">
+      <h2>To Do</h2>
+      <div class="task-list" id="todo"></div>
+    </div>
+    <div class="column" data-status="inprogress">
+      <h2>In Progress</h2>
+      <div class="task-list" id="inprogress"></div>
+    </div>
+    <div class="column" data-status="done">
+      <h2>Done</h2>
+      <div class="task-list" id="done"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
